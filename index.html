@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Liv</title>
+<meta charset="utf-8">
+</head>
+<body>
+    <h1>
+        Liv.</h1>
+    
+    <style>
+        body {
+          font-family: "Work Sans Bold", sans-serif;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: white;
+        }
+        
+        .navbar a {
+          float: right;
+          font-size: 16px;
+          color: black;
+          text-align: left;
+          padding: 14px 60px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: right;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: black;
+          padding: 14px 60px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: #ddd;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 27px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="navbar">
+            <a class="dropbtn" href="Liv_ContactUs.html">Contact Us</a>
+            <a class="dropbtn" href="Liv_AboutUs.html">About Us</a>
+          <div class="dropdown">
+            <button class="dropbtn">Products 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Liv_Products.html">Tampons</a>
+                <a href="Liv_Products.html">Period Underwear</a>
+                <a href="Liv_Products.html">Menstrual Cup</a>
+                <a href="oLiv_Products.html">Ovulation Test</a>
+                <a href="Liv_Products.html">Pregnancy Test</a>
+                <a href="Liv_Products.html">Prenatal Vitamins</a>
+            </div>
+          </div> 
+          <a class="dropbtn" href="index.html">Home</a>
+        </div>
+    <style>
+        * {box-sizing: content-box}
+        body {font-family: Work Sans Bold, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: absolute;
+          margin: 40;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: fixed;
+          top: 57%;
+          width: <viewport-length>;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 5px 0 0 5px;
+        }
+        
+        /* Caption text */
+        .text {
+          color: white;
+          font-size: 55px;
+          padding: 130px 80px;
+          position: absolute;
+          top: 60px;
+          width: 100%;
+          text-align: left;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+    </style>
+    </head>
+    <body>
+    
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <img src="Women.jpeg" style="width: 1290px;height:640px">
+      <div class="text">Liv. is a natural<br>
+      and sustainable<br> 
+      reproductive<br> 
+      health brand</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="Pregnant.jpeg" style="width: 1290px;height:640px">
+      <div class="text">We support safe,<br>
+        accessible, and inclusive<br>
+        reproductive health for<br>
+        all people.</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="Tampons Image.jpeg" style="width: 1290px;height:640px">
+      <div class="text">No artificial<br>
+        ingredients or toxic<br>
+        materials are used<br>
+        in these products.</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+</body>
+</html>
